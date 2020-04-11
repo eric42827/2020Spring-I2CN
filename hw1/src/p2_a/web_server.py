@@ -24,23 +24,21 @@ while True:
             # Read data from the file that the client requested
             f = open('.'+filename) #open html
             # Split the data into lines for future transmission 
-            outputdata = f.read()
+            html_body = f.read()
             f.close()
             #print(outputdata)
-            # send HTTP status to client
-            client.send(message.split()[2]+' 200 OK\r\n'.encode())
-            # send content type to client
-            client.send('Content-Type: text/html\r\n\r\n'.encode())
-            # Send the content of the requested file to the client  
-            #for i in range(0, len(outputdata)):
-            client.send(outputdata.encode()+"\r\n".encode())
+            # send HTTP status, content type, body to client
+            response = message.split()[2]+\
+                ' 200 OK\r\nContent-Type: text/html\r\n\r\n'+\
+                html_body
+            client.sendall(response.encode())
             client.close()
     except IOError:
         #Send response message for file not found
-        client.send(message.split()[2]+' 404 Not Found\r\n'.encode())
-        # send content type to client
-        client.send('Content-Type: text/html\r\n\r\n'.encode())
-        client.send('<html><head><title>404 Not Found</title></head><body bgcolor=white><h1>404 Not Found</h1><p>The requested URL was not found on this server.</p></body></html>')
+        response = message.split()[2]+' 404 Not Found\r\n'+\
+            'Content-Type: text/html\r\n\r\n'+\
+                '<html><head><title>404 Not Found</title></head><body bgcolor=white><h1>404 Not Found</h1><p>The requested URL was not found on this server.</p></body></html>'
+        client.sendall(response.encode())
         #Close client socket
         client.close()
 s.close()
