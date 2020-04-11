@@ -45,8 +45,7 @@ def routine(tcpCliSock):
         print('Read from cache\n')
 	# Error handling for file not found in cache
     except IOError:
-        #if fileExist == "false":
-            # Create a socket on the proxyserver
+        # Create a socket on the proxyserver
         c = socket(AF_INET, SOCK_STREAM)
         try:
             # Connect to the socket to port 80
@@ -72,18 +71,7 @@ def routine(tcpCliSock):
         except:
             print("Illegal request")
         c.close()
-        ''' 
-       elif filename!='favicon.ico':
-            # HTTP response message for file not found
-            # Fill in start.
-            tcpCliSock.send(message.split()[2]+' 404 Not Found\r\n'.encode())
-            # send content type to client
-            tcpCliSock.send('Content-Type: text/html\r\n\r\n'.encode())
-            tcpCliSock.send('<html><head><title>404 Not Found</title></head><body bgcolor=white><h1>404 Not Found</h1><p>The requested URL was not found on this server.</p></body></html>')
-            #Close client socket
-            tcpCliSock.close()
-            # Fill in end.
-        '''
+
     
     # Close the client and the server sockets. For testing multi-user, you should comment the tcpCliSock.close()
     #tcpCliSock.close()
