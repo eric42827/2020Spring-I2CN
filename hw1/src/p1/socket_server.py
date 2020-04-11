@@ -33,14 +33,15 @@ while(True):
                 data = client.recv(1024).decode('utf-8')
                 data_sep = data.split()
                 ans = 0
+                
                 if data_sep[1]=='+':
-                    ans = int(data_sep[0]) + int(data_sep[-1])
+                    ans = float(data_sep[0]) + float(data_sep[-1])
                 elif data_sep[1]=='-':
-                    ans = int(data_sep[0]) - int(data_sep[-1])
+                    ans = float(data_sep[0]) - float(data_sep[-1])
                 elif data_sep[1]=='*':
-                    ans = int(data_sep[0]) * int(data_sep[-1])
+                    ans = float(data_sep[0]) * float(data_sep[-1])
                 elif data_sep[1]=='/':
-                    ans = int(data_sep[0]) / int(data_sep[-1])
+                    ans = float(data_sep[0]) / float(data_sep[-1])
                 sol = 'The answer is '+str(ans)+'.\nDo you have any question? (Y/N)\n'            
                 client.send(sol.encode('utf-8'))
                 res = client.recv(1024).decode('utf-8')
