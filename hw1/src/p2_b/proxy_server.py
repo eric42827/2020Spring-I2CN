@@ -6,81 +6,60 @@ import threading
 if len(sys.argv) <= 1:
 	print('Usage : "python ProxyServer.py server_ip"\n[server_ip : It is the IP Address Of Proxy Server & Web server.')
 	sys.exit(2)
-# Environment : Python 3.8
 # Create a server socket, bind it to a port and start listening
 tcpSerSock = socket(AF_INET, SOCK_STREAM)
-# Fill in start.
 tcpSerSock.setsockopt(SOL_SOCKET,SO_REUSEADDR,1)
 tcpSerSock.bind(('', 8080))
 tcpSerSock.listen(5)
-# Fill in end.
 def routine(tcpCliSock):
     # Strat receiving data from the client
     message = tcpCliSock.recv(1024).decode('utf-8')
-    
-    #fileExist = "false"
+    if len(message) <=1:
+        return
     # Extract the filename from the given message
-    #print(message.split()[1])
     filename = message.split()[1].partition("/")[2]
-    #if filename == 'favicon.ico':
-        #return
-    print(filename)
     filetouse = "./" + filename
+    print('Fliename: '+filename,flush=True)
     #print(filetouse)
     #print(message)
     try:
         # Check wether the file exist in the cache
         f = open(filetouse)
-        outputdata = f.read()
-        #fileExist = "true"
+        html_body = f.read()
         # ProxyServer finds a cache hit and generates a response message
-        tcpCliSock.send("HTTP/1.1 200 OK\r\n".encode())
-        tcpCliSock.send("Content-Type:text/html\r\n\r\n".encode())
-        # Fill in start.
-        for i in range(0,len(outputdata)):
-            tcpCliSock.send(outputdata[i].encode())
-        tcpCliSock.send("\r\n".encode())
-        tcpCliSock.close()
-        # Fill in end.
-        print('Read from cache\n')
+        response = "HTTP/1.1 200 OK\r\n"+\
+            "Content-Type:text/html\r\n\r\n"+\
+                html_body
+        print('Read from cache\n',flush=True)
 	# Error handling for file not found in cache
     except IOError:
         # Create a socket on the proxyserver
         c = socket(AF_INET, SOCK_STREAM)
-        try:
-            # Connect to the socket to port 80
-            c.connect((sys.argv[1],80))
-            # ask port 127.0.0.1:80 for the file requested by the client
-            request = "GET " + "/" + filename + " HTTP/1.1\n\n"
-            c.send(request.encode())
-            # receive the response 
-            status = c.recv(1024).decode('utf-8')
-            contenttype = c.recv(1024).decode('utf-8')
-            html_content = c.recv(4096).decode('utf-8')
-            print(status)
-            #print(html_content)
-            #print(contenttype)
-            # Create a new file in the cache for the requested file.
-            # Also send the response in the buffer to client socket and the corresponding file in the cache
-            if status == 'HTTP/1.1 200 OK\r\n':
-                tmpFile = open("./" + filename,"w")
-                tmpFile.write(html_content)
-                tmpFile.close()
-            response = 'HTTP/1.1 200 OK\r\n\r\n' + html_content
-            tcpCliSock.send(response.encode())
-        except:
-            print("Illegal request")
+        # Connect to the socket to port 80
+        c.connect((sys.argv[1],80))
+        # ask port 127.0.0.1:80 for the file requested by the client
+        request = "GET " + "/" + filename + " HTTP/1.1\r\n"
+        c.send(request.encode())
+        # receive the response 
+        raw_resp = c.recv(4096).decode('utf-8')
+        status = raw_resp.splitlines()[0]
+        bodyStart = raw_resp.index('\r\n\r\n')+4
+        html_body = raw_resp[bodyStart:]
+        print(repr(status)+'\n',flush=True)
+        # Create a new file in the cache for the requested file.
+        # Also send the response in the buffer to client socket and the corresponding file in the cache
+        if status.endswith('200 OK'):
+            tmpFile = open("./" + filename,"w")
+            tmpFile.write(html_body)
+            tmpFile.close()
+        response = raw_resp
         c.close()
-
-    
-    # Close the client and the server sockets. For testing multi-user, you should comment the tcpCliSock.close()
-    #tcpCliSock.close()
-
-# Fill in start. Change this part, such that multi-users can connect to this proxy server
+    tcpCliSock.sendall(response.encode())
+    tcpCliSock.close()
 while True:
-    print('Ready to serve...')
+    print('Ready to serve...',flush=True)
     tcpCliSock, addr = tcpSerSock.accept()
-    print('Received a connection from:', addr)
-    routine(tcpCliSock)
+    print('Received a connection from:', addr,flush=True)
+    #routine(tcpCliSock)
+    threading.Thread(target=routine, args=(tcpCliSock,)).start()
 tcpSerSock.close()
-# Fill in end.
