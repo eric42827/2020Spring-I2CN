@@ -18,7 +18,7 @@ def routine(tcpCliSock):
     # Strat receiving data from the client
     message = tcpCliSock.recv(1024).decode('utf-8')
     
-    fileExist = "false"
+    #fileExist = "false"
     # Extract the filename from the given message
     #print(message.split()[1])
     filename = message.split()[1].partition("/")[2]
@@ -32,7 +32,7 @@ def routine(tcpCliSock):
         # Check wether the file exist in the cache
         f = open(filetouse)
         outputdata = f.read()
-        fileExist = "true"
+        #fileExist = "true"
         # ProxyServer finds a cache hit and generates a response message
         tcpCliSock.send("HTTP/1.1 200 OK\r\n".encode())
         tcpCliSock.send("Content-Type:text/html\r\n\r\n".encode())
@@ -45,34 +45,35 @@ def routine(tcpCliSock):
         print('Read from cache\n')
 	# Error handling for file not found in cache
     except IOError:
-        if fileExist == "false":
+        #if fileExist == "false":
             # Create a socket on the proxyserver
-            c = socket(AF_INET, SOCK_STREAM)
-            try:
-                # Connect to the socket to port 80
-                c.connect((sys.argv[1],80))
-                # ask port 127.0.0.1:80 for the file requested by the client
-                request = "GET " + "/" + filename + " HTTP/1.1\n\n"
-                c.send(request.encode())
-                # receive the response 
-                status = c.recv(1024).decode('utf-8')
-                contenttype = c.recv(1024).decode('utf-8')
-                html_content = c.recv(4096).decode('utf-8')
-                print(status)
-                #print(html_content)
-                #print(contenttype)
-                # Create a new file in the cache for the requested file.
-                # Also send the response in the buffer to client socket and the corresponding file in the cache
-                if status == 'HTTP/1.1 200 OK\r\n':
-                    tmpFile = open("./" + filename,"w")
-                    tmpFile.write(html_content)
-                    tmpFile.close()
-                response = 'HTTP/1.1 200 OK\r\n\r\n' + html_content
-                tcpCliSock.send(response.encode())
-            except:
-                print("Illegal request")
-            c.close()
-        elif filename!='favicon.ico':
+        c = socket(AF_INET, SOCK_STREAM)
+        try:
+            # Connect to the socket to port 80
+            c.connect((sys.argv[1],80))
+            # ask port 127.0.0.1:80 for the file requested by the client
+            request = "GET " + "/" + filename + " HTTP/1.1\n\n"
+            c.send(request.encode())
+            # receive the response 
+            status = c.recv(1024).decode('utf-8')
+            contenttype = c.recv(1024).decode('utf-8')
+            html_content = c.recv(4096).decode('utf-8')
+            print(status)
+            #print(html_content)
+            #print(contenttype)
+            # Create a new file in the cache for the requested file.
+            # Also send the response in the buffer to client socket and the corresponding file in the cache
+            if status == 'HTTP/1.1 200 OK\r\n':
+                tmpFile = open("./" + filename,"w")
+                tmpFile.write(html_content)
+                tmpFile.close()
+            response = 'HTTP/1.1 200 OK\r\n\r\n' + html_content
+            tcpCliSock.send(response.encode())
+        except:
+            print("Illegal request")
+        c.close()
+        ''' 
+       elif filename!='favicon.ico':
             # HTTP response message for file not found
             # Fill in start.
             tcpCliSock.send(message.split()[2]+' 404 Not Found\r\n'.encode())
@@ -82,6 +83,7 @@ def routine(tcpCliSock):
             #Close client socket
             tcpCliSock.close()
             # Fill in end.
+        '''
     
     # Close the client and the server sockets. For testing multi-user, you should comment the tcpCliSock.close()
     #tcpCliSock.close()
