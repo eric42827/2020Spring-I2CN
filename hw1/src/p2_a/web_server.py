@@ -17,10 +17,10 @@ while True:
     try:
         # Receive http request from the clinet
         message = str(client.recv(4096))
-        print(message)
+        #print(message)
         if len(message)>1:
             filename = message.split()[1] #URL
-            #print(filename)
+            print('Filename: '+filename)
             # Read data from the file that the client requested
             f = open('.'+filename) #open html
             # Split the data into lines for future transmission 
@@ -31,6 +31,7 @@ while True:
             response = message.split()[2]+\
                 ' 200 OK\r\nContent-Type: text/html\r\n\r\n'+\
                 html_body
+            print(response+'\n')
             client.sendall(response.encode())
             client.close()
     except IOError:
@@ -38,6 +39,7 @@ while True:
         response = message.split()[2]+' 404 Not Found\r\n'+\
             'Content-Type: text/html\r\n\r\n'+\
                 '<html><head><title>404 Not Found</title></head><body bgcolor=white><h1>404 Not Found</h1><p>The requested URL was not found on this server.</p></body></html>'
+        print(response+'\n')
         client.sendall(response.encode())
         #Close client socket
         client.close()

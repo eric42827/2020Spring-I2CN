@@ -1,0 +1,655 @@
+-----  Stop and Wait Network Simulator Version 1.1 -------- 
+
+the number of messages to simulate: 20
+packet loss probability: 0.100000
+packet corruption probability: 0.100000
+average time between messages from sender's layer5: 10.000000
+TRACE: 2
+EVENT time: 18.705740,  type: 1, fromlayer5  entity: 0
+temp_time1: 18.705740
+EVENT time: 24.170835,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 29.402449,  type: 2, fromlayer3  entity: 0
+  A_input: got ACK (ack=1)
+temp_time: 18.705740
+estimatertt:10.696709 ,samplertt:10.696709
+EVENT time: 35.124840,  type: 1, fromlayer5  entity: 0
+temp_time2: 35.124840
+EVENT time: 37.145336,  type: 2, fromlayer3  entity: 1
+2
+          TOLAYER3: packet being corrupted
+EVENT time: 41.612602,  type: 2, fromlayer3  entity: 0
+EVENT time: 45.821548,  type: 0, timerinterrupt   entity: 0
+          TOLAYER3: packet being lost
+EVENT time: 52.094032,  type: 1, fromlayer5  entity: 0
+temp_time3: 52.094032
+EVENT time: 56.518257,  type: 0, timerinterrupt   entity: 0
+EVENT time: 57.366261,  type: 2, fromlayer3  entity: 1
+3
+EVENT time: 59.732601,  type: 2, fromlayer3  entity: 0
+  A_input: got ACK (ack=3)
+temp_time: 56.518257
+estimatertt:10.696709 ,samplertt:3.214344
+EVENT time: 60.679379,  type: 1, fromlayer5  entity: 0
+temp_time4: 60.679379
+          TOLAYER3: packet being lost
+EVENT time: 61.568901,  type: 2, fromlayer3  entity: 1
+          TOLAYER3: packet being lost
+1
+EVENT time: 64.299141,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 70.548157,  type: 2, fromlayer3  entity: 0
+EVENT time: 70.850044,  type: 1, fromlayer5  entity: 0
+temp_time5: 70.850044
+          TOLAYER3: packet being lost
+EVENT time: 71.376083,  type: 0, timerinterrupt   entity: 0
+          TOLAYER3: packet being corrupted
+EVENT time: 77.214050,  type: 2, fromlayer3  entity: 1
+4
+          TOLAYER3: packet being lost
+EVENT time: 82.072792,  type: 0, timerinterrupt   entity: 0
+          TOLAYER3: packet being corrupted
+EVENT time: 84.631897,  type: 1, fromlayer5  entity: 0
+temp_time6: 84.631897
+          TOLAYER3: packet being corrupted
+EVENT time: 86.973297,  type: 2, fromlayer3  entity: 1
+EVENT time: 88.279686,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 89.851135,  type: 2, fromlayer3  entity: 0
+  A_input: got ACK (ack=4)
+temp_time: 82.072792
+estimatertt:9.821199 ,samplertt:7.778343
+EVENT time: 93.512901,  type: 2, fromlayer3  entity: 0
+EVENT time: 93.858307,  type: 2, fromlayer3  entity: 1
+          TOLAYER3: packet being corrupted
+EVENT time: 95.613983,  type: 2, fromlayer3  entity: 1
+EVENT time: 99.672333,  type: 0, timerinterrupt   entity: 0
+EVENT time: 101.650703,  type: 2, fromlayer3  entity: 1
+5
+EVENT time: 101.923584,  type: 1, fromlayer5  entity: 0
+temp_time7: 101.923584
+EVENT time: 102.769089,  type: 2, fromlayer3  entity: 0
+EVENT time: 103.457039,  type: 2, fromlayer3  entity: 1
+6
+EVENT time: 106.405899,  type: 1, fromlayer5  entity: 0
+temp_time8: 106.405899
+EVENT time: 108.386757,  type: 2, fromlayer3  entity: 0
+EVENT time: 109.493530,  type: 0, timerinterrupt   entity: 0
+          TOLAYER3: packet being lost
+EVENT time: 109.689476,  type: 2, fromlayer3  entity: 1
+7
+EVENT time: 110.499481,  type: 2, fromlayer3  entity: 0
+  A_input: got ACK (ack=5)
+temp_time: 109.493530
+estimatertt:9.821199 ,samplertt:1.005951
+EVENT time: 112.981857,  type: 2, fromlayer3  entity: 0
+  A_input: got ACK (ack=6)
+temp_time: 109.493530
+estimatertt:9.821199 ,samplertt:3.488327
+EVENT time: 117.481682,  type: 1, fromlayer5  entity: 0
+temp_time9: 117.481682
+EVENT time: 119.018494,  type: 2, fromlayer3  entity: 1
+8
+EVENT time: 120.542198,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 122.803055,  type: 0, timerinterrupt   entity: 0
+          TOLAYER3: packet being corrupted
+          TOLAYER3: packet being corrupted
+EVENT time: 122.829834,  type: 2, fromlayer3  entity: 0
+  A_input: got ACK (ack=7)
+temp_time: 122.803055
+estimatertt:9.821199 ,samplertt:0.026779
+EVENT time: 129.445511,  type: 2, fromlayer3  entity: 0
+  A_input: got ACK (ack=8)
+temp_time: 122.803055
+estimatertt:8.867577 ,samplertt:6.642456
+EVENT time: 129.976685,  type: 2, fromlayer3  entity: 1
+          TOLAYER3: packet being corrupted
+1
+EVENT time: 130.141342,  type: 1, fromlayer5  entity: 0
+temp_time10: 130.141342
+EVENT time: 130.526764,  type: 1, fromlayer5  entity: 0
+temp_time11: 130.526764
+EVENT time: 132.752533,  type: 2, fromlayer3  entity: 0
+EVENT time: 138.313080,  type: 0, timerinterrupt   entity: 0
+          TOLAYER3: packet being corrupted
+          TOLAYER3: packet being corrupted
+EVENT time: 138.802582,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 139.533508,  type: 2, fromlayer3  entity: 0
+EVENT time: 143.446274,  type: 2, fromlayer3  entity: 0
+EVENT time: 144.305542,  type: 2, fromlayer3  entity: 1
+9
+EVENT time: 147.180664,  type: 0, timerinterrupt   entity: 0
+EVENT time: 148.843979,  type: 2, fromlayer3  entity: 0
+  A_input: got ACK (ack=9)
+temp_time: 147.180664
+estimatertt:8.867577 ,samplertt:1.663315
+EVENT time: 148.877319,  type: 1, fromlayer5  entity: 0
+temp_time12: 148.877319
+EVENT time: 152.085175,  type: 2, fromlayer3  entity: 1
+          TOLAYER3: packet being corrupted
+EVENT time: 157.711548,  type: 0, timerinterrupt   entity: 0
+EVENT time: 157.986130,  type: 2, fromlayer3  entity: 1
+EVENT time: 158.853638,  type: 2, fromlayer3  entity: 0
+EVENT time: 162.961380,  type: 2, fromlayer3  entity: 0
+EVENT time: 166.579132,  type: 0, timerinterrupt   entity: 0
+          TOLAYER3: packet being corrupted
+EVENT time: 166.809250,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 167.953583,  type: 2, fromlayer3  entity: 0
+EVENT time: 168.296677,  type: 1, fromlayer5  entity: 0
+temp_time13: 168.296677
+EVENT time: 172.056381,  type: 2, fromlayer3  entity: 1
+10
+EVENT time: 174.591705,  type: 2, fromlayer3  entity: 1
+11
+EVENT time: 175.446716,  type: 0, timerinterrupt   entity: 0
+          TOLAYER3: packet being corrupted
+          TOLAYER3: packet being corrupted
+EVENT time: 180.812576,  type: 2, fromlayer3  entity: 0
+  A_input: got ACK (ack=10)
+temp_time: 175.446716
+estimatertt:7.817061 ,samplertt:5.365860
+EVENT time: 183.914154,  type: 2, fromlayer3  entity: 1
+EVENT time: 186.910538,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 187.661438,  type: 1, fromlayer5  entity: 0
+temp_time14: 187.661438
+          TOLAYER3: packet being lost
+EVENT time: 187.998520,  type: 2, fromlayer3  entity: 0
+  A_input: got ACK (ack=11)
+temp_time: 175.446716
+estimatertt:9.237484 ,samplertt:12.551804
+EVENT time: 192.429504,  type: 2, fromlayer3  entity: 0
+EVENT time: 194.252869,  type: 2, fromlayer3  entity: 0
+EVENT time: 195.166199,  type: 2, fromlayer3  entity: 1
+EVENT time: 197.236008,  type: 0, timerinterrupt   entity: 0
+          TOLAYER3: packet being lost
+          TOLAYER3: packet being corrupted
+EVENT time: 197.484818,  type: 2, fromlayer3  entity: 0
+EVENT time: 200.854019,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 205.429840,  type: 1, fromlayer5  entity: 0
+temp_time15: 205.429840
+EVENT time: 206.473495,  type: 0, timerinterrupt   entity: 0
+EVENT time: 207.017059,  type: 2, fromlayer3  entity: 0
+EVENT time: 207.125702,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 210.162659,  type: 2, fromlayer3  entity: 0
+EVENT time: 212.807159,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 215.710983,  type: 0, timerinterrupt   entity: 0
+EVENT time: 216.128922,  type: 2, fromlayer3  entity: 1
+12
+EVENT time: 216.174484,  type: 1, fromlayer5  entity: 0
+temp_time16: 216.174484
+EVENT time: 219.847137,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 220.525421,  type: 2, fromlayer3  entity: 0
+EVENT time: 222.479431,  type: 1, fromlayer5  entity: 0
+temp_time17: 222.479431
+EVENT time: 224.718811,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 224.948471,  type: 0, timerinterrupt   entity: 0
+          TOLAYER3: packet being lost
+          TOLAYER3: packet being lost
+EVENT time: 227.938065,  type: 1, fromlayer5  entity: 0
+temp_time18: 227.938065
+EVENT time: 230.202835,  type: 2, fromlayer3  entity: 0
+  A_input: got ACK (ack=12)
+temp_time: 224.948471
+estimatertt:8.042548 ,samplertt:5.254364
+EVENT time: 231.258041,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 233.025543,  type: 1, fromlayer5  entity: 0
+temp_time19: 233.025543
+EVENT time: 233.156677,  type: 1, fromlayer5  entity: 0
+temp_time20: 233.156677
+EVENT time: 236.250656,  type: 2, fromlayer3  entity: 0
+EVENT time: 238.245377,  type: 0, timerinterrupt   entity: 0
+          TOLAYER3: packet being lost
+          TOLAYER3: packet being corrupted
+          TOLAYER3: packet being lost
+EVENT time: 238.539490,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 238.635269,  type: 2, fromlayer3  entity: 0
+EVENT time: 243.422958,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 246.287918,  type: 0, timerinterrupt   entity: 0
+EVENT time: 246.607559,  type: 2, fromlayer3  entity: 0
+EVENT time: 247.437317,  type: 2, fromlayer3  entity: 1
+EVENT time: 249.454102,  type: 2, fromlayer3  entity: 0
+EVENT time: 250.760147,  type: 2, fromlayer3  entity: 1
+13
+EVENT time: 254.330460,  type: 0, timerinterrupt   entity: 0
+          TOLAYER3: packet being corrupted
+EVENT time: 254.631485,  type: 2, fromlayer3  entity: 1
+          TOLAYER3: packet being corrupted
+EVENT time: 255.320770,  type: 2, fromlayer3  entity: 0
+EVENT time: 257.294617,  type: 2, fromlayer3  entity: 0
+EVENT time: 258.756439,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 262.373016,  type: 0, timerinterrupt   entity: 0
+EVENT time: 264.834686,  type: 2, fromlayer3  entity: 0
+  A_input: got ACK (ack=13)
+temp_time: 262.373016
+estimatertt:8.042548 ,samplertt:2.461670
+EVENT time: 268.681885,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 271.095612,  type: 2, fromlayer3  entity: 1
+EVENT time: 272.170410,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 272.877228,  type: 0, timerinterrupt   entity: 0
+          TOLAYER3: packet being lost
+          TOLAYER3: packet being corrupted
+EVENT time: 273.304688,  type: 2, fromlayer3  entity: 0
+EVENT time: 274.017609,  type: 2, fromlayer3  entity: 1
+EVENT time: 276.145294,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 280.919769,  type: 0, timerinterrupt   entity: 0
+EVENT time: 282.465759,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 282.720612,  type: 2, fromlayer3  entity: 0
+EVENT time: 285.316711,  type: 2, fromlayer3  entity: 0
+EVENT time: 288.962311,  type: 0, timerinterrupt   entity: 0
+          TOLAYER3: packet being corrupted
+EVENT time: 289.484375,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 292.922913,  type: 2, fromlayer3  entity: 0
+EVENT time: 297.004852,  type: 0, timerinterrupt   entity: 0
+          TOLAYER3: packet being lost
+EVENT time: 297.606781,  type: 2, fromlayer3  entity: 1
+14
+EVENT time: 302.160889,  type: 2, fromlayer3  entity: 0
+EVENT time: 304.722107,  type: 2, fromlayer3  entity: 0
+EVENT time: 305.047394,  type: 0, timerinterrupt   entity: 0
+EVENT time: 306.977264,  type: 2, fromlayer3  entity: 1
+15
+EVENT time: 308.789734,  type: 2, fromlayer3  entity: 0
+EVENT time: 313.089935,  type: 0, timerinterrupt   entity: 0
+EVENT time: 315.109894,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 316.982117,  type: 2, fromlayer3  entity: 0
+EVENT time: 321.132477,  type: 0, timerinterrupt   entity: 0
+EVENT time: 322.396759,  type: 2, fromlayer3  entity: 0
+EVENT time: 323.261597,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 325.988586,  type: 2, fromlayer3  entity: 0
+  A_input: got ACK (ack=14)
+temp_time: 321.132477
+estimatertt:8.042548 ,samplertt:4.856110
+EVENT time: 327.576355,  type: 2, fromlayer3  entity: 1
+          TOLAYER3: packet being corrupted
+1
+EVENT time: 330.545746,  type: 2, fromlayer3  entity: 0
+  A_input: got ACK (ack=15)
+temp_time: 321.132477
+estimatertt:8.453764 ,samplertt:9.413269
+EVENT time: 335.055450,  type: 2, fromlayer3  entity: 0
+EVENT time: 336.305847,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 338.999512,  type: 0, timerinterrupt   entity: 0
+EVENT time: 344.231293,  type: 2, fromlayer3  entity: 1
+16
+EVENT time: 344.378632,  type: 2, fromlayer3  entity: 0
+EVENT time: 347.453278,  type: 0, timerinterrupt   entity: 0
+EVENT time: 348.338409,  type: 2, fromlayer3  entity: 1
+17
+          TOLAYER3: packet being corrupted
+EVENT time: 353.376007,  type: 2, fromlayer3  entity: 0
+EVENT time: 355.907043,  type: 0, timerinterrupt   entity: 0
+          TOLAYER3: packet being corrupted
+EVENT time: 358.075317,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 358.366333,  type: 2, fromlayer3  entity: 0
+EVENT time: 363.425262,  type: 2, fromlayer3  entity: 1
+          TOLAYER3: packet being corrupted
+1
+EVENT time: 364.360809,  type: 0, timerinterrupt   entity: 0
+          TOLAYER3: packet being corrupted
+EVENT time: 366.408997,  type: 2, fromlayer3  entity: 0
+  A_input: got ACK (ack=16)
+temp_time: 364.360809
+estimatertt:8.453764 ,samplertt:2.048187
+EVENT time: 368.197906,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 369.572601,  type: 2, fromlayer3  entity: 0
+EVENT time: 371.700073,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 372.746918,  type: 2, fromlayer3  entity: 1
+18
+EVENT time: 374.422699,  type: 2, fromlayer3  entity: 0
+  A_input: got ACK (ack=17)
+temp_time: 364.360809
+estimatertt:8.936201 ,samplertt:10.061890
+EVENT time: 375.206940,  type: 2, fromlayer3  entity: 1
+19
+EVENT time: 377.840729,  type: 2, fromlayer3  entity: 0
+EVENT time: 380.774078,  type: 2, fromlayer3  entity: 1
+20
+          TOLAYER3: packet being corrupted
+EVENT time: 383.358887,  type: 0, timerinterrupt   entity: 0
+          TOLAYER3: packet being lost
+EVENT time: 384.619415,  type: 2, fromlayer3  entity: 0
+EVENT time: 386.987823,  type: 2, fromlayer3  entity: 0
+EVENT time: 387.725830,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 389.942657,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 391.513489,  type: 2, fromlayer3  entity: 0
+  A_input: got ACK (ack=18)
+temp_time: 383.358887
+estimatertt:8.701721 ,samplertt:8.154602
+EVENT time: 391.816071,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 397.203400,  type: 2, fromlayer3  entity: 0
+  A_input: got ACK (ack=19)
+temp_time: 383.358887
+estimatertt:10.244558 ,samplertt:13.844513
+EVENT time: 398.413422,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 401.637146,  type: 2, fromlayer3  entity: 1
+EVENT time: 403.241241,  type: 2, fromlayer3  entity: 0
+EVENT time: 404.922852,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 407.447968,  type: 0, timerinterrupt   entity: 0
+EVENT time: 409.227936,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 412.521790,  type: 2, fromlayer3  entity: 0
+  A_input: got ACK (ack=20)
+temp_time: 407.447968
+estimatertt:8.693337 ,samplertt:5.073822
+EVENT time: 418.426758,  type: 2, fromlayer3  entity: 1
+          TOLAYER3: packet being lost
+1
+EVENT time: 419.136627,  type: 2, fromlayer3  entity: 0
+EVENT time: 427.149963,  type: 2, fromlayer3  entity: 0
+EVENT time: 427.692841,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 429.668671,  type: 2, fromlayer3  entity: 0
+EVENT time: 430.332336,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 435.803162,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 438.877991,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 439.336823,  type: 2, fromlayer3  entity: 0
+EVENT time: 442.058929,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 442.658813,  type: 2, fromlayer3  entity: 0
+EVENT time: 444.465515,  type: 2, fromlayer3  entity: 0
+EVENT time: 447.525574,  type: 2, fromlayer3  entity: 1
+          TOLAYER3: packet being corrupted
+1
+EVENT time: 449.958405,  type: 2, fromlayer3  entity: 0
+EVENT time: 451.154938,  type: 2, fromlayer3  entity: 0
+EVENT time: 454.147278,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 460.632019,  type: 2, fromlayer3  entity: 0
+EVENT time: 461.978790,  type: 2, fromlayer3  entity: 1
+          TOLAYER3: packet being corrupted
+1
+EVENT time: 466.723938,  type: 2, fromlayer3  entity: 0
+EVENT time: 466.937592,  type: 2, fromlayer3  entity: 1
+EVENT time: 470.240509,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 470.829193,  type: 2, fromlayer3  entity: 0
+EVENT time: 476.453156,  type: 2, fromlayer3  entity: 0
+EVENT time: 478.014282,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 480.735992,  type: 2, fromlayer3  entity: 0
+EVENT time: 487.862854,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 487.906799,  type: 2, fromlayer3  entity: 0
+EVENT time: 490.892365,  type: 2, fromlayer3  entity: 1
+          TOLAYER3: packet being lost
+1
+EVENT time: 497.648834,  type: 2, fromlayer3  entity: 0
+EVENT time: 498.388519,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 499.149933,  type: 2, fromlayer3  entity: 0
+EVENT time: 501.002960,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 504.112091,  type: 2, fromlayer3  entity: 0
+EVENT time: 505.014740,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 509.689911,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 513.393372,  type: 2, fromlayer3  entity: 0
+EVENT time: 516.668030,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 518.049377,  type: 2, fromlayer3  entity: 0
+EVENT time: 521.419861,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 521.625061,  type: 2, fromlayer3  entity: 0
+EVENT time: 526.020264,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 527.191223,  type: 2, fromlayer3  entity: 0
+EVENT time: 530.187073,  type: 2, fromlayer3  entity: 0
+EVENT time: 532.650208,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 536.776306,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 538.577515,  type: 2, fromlayer3  entity: 0
+EVENT time: 543.324829,  type: 2, fromlayer3  entity: 1
+          TOLAYER3: packet being lost
+1
+EVENT time: 544.548523,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 547.017334,  type: 2, fromlayer3  entity: 0
+EVENT time: 551.750305,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 553.703918,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 555.199219,  type: 2, fromlayer3  entity: 0
+EVENT time: 559.257996,  type: 2, fromlayer3  entity: 1
+          TOLAYER3: packet being lost
+1
+EVENT time: 561.442017,  type: 2, fromlayer3  entity: 1
+EVENT time: 563.882202,  type: 2, fromlayer3  entity: 0
+EVENT time: 566.431946,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 567.527344,  type: 2, fromlayer3  entity: 0
+EVENT time: 573.637085,  type: 2, fromlayer3  entity: 0
+EVENT time: 573.958618,  type: 2, fromlayer3  entity: 1
+          TOLAYER3: packet being corrupted
+1
+EVENT time: 578.033813,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 582.332703,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 583.402832,  type: 2, fromlayer3  entity: 0
+EVENT time: 583.833374,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 586.287659,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 586.744263,  type: 2, fromlayer3  entity: 0
+EVENT time: 590.232910,  type: 2, fromlayer3  entity: 0
+EVENT time: 593.296021,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 593.549500,  type: 2, fromlayer3  entity: 0
+EVENT time: 596.798523,  type: 2, fromlayer3  entity: 1
+EVENT time: 601.367615,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 603.308167,  type: 2, fromlayer3  entity: 0
+EVENT time: 606.837524,  type: 2, fromlayer3  entity: 0
+EVENT time: 608.608032,  type: 2, fromlayer3  entity: 0
+EVENT time: 609.660706,  type: 2, fromlayer3  entity: 0
+EVENT time: 609.926636,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 611.233154,  type: 2, fromlayer3  entity: 0
+EVENT time: 614.040100,  type: 2, fromlayer3  entity: 0
+EVENT time: 616.012268,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 623.888062,  type: 2, fromlayer3  entity: 0
+EVENT time: 625.173096,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 628.632812,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 631.688904,  type: 2, fromlayer3  entity: 0
+EVENT time: 632.593140,  type: 2, fromlayer3  entity: 1
+          TOLAYER3: packet being corrupted
+1
+EVENT time: 632.978394,  type: 2, fromlayer3  entity: 0
+EVENT time: 635.016174,  type: 2, fromlayer3  entity: 1
+          TOLAYER3: packet being lost
+1
+EVENT time: 636.584473,  type: 2, fromlayer3  entity: 0
+EVENT time: 639.949219,  type: 2, fromlayer3  entity: 0
+EVENT time: 644.631592,  type: 2, fromlayer3  entity: 1
+          TOLAYER3: packet being lost
+1
+EVENT time: 647.466736,  type: 2, fromlayer3  entity: 0
+EVENT time: 647.749512,  type: 2, fromlayer3  entity: 1
+          TOLAYER3: packet being corrupted
+1
+EVENT time: 650.276123,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 653.289917,  type: 2, fromlayer3  entity: 0
+EVENT time: 658.621460,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 661.760864,  type: 2, fromlayer3  entity: 0
+EVENT time: 663.052429,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 665.282593,  type: 2, fromlayer3  entity: 0
+EVENT time: 668.652283,  type: 2, fromlayer3  entity: 0
+EVENT time: 669.103943,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 669.822754,  type: 2, fromlayer3  entity: 0
+EVENT time: 671.282776,  type: 2, fromlayer3  entity: 0
+EVENT time: 678.115784,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 682.181885,  type: 2, fromlayer3  entity: 0
+EVENT time: 682.542297,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 688.391846,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 688.973083,  type: 2, fromlayer3  entity: 0
+EVENT time: 692.921387,  type: 2, fromlayer3  entity: 0
+EVENT time: 693.856750,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 701.439575,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 702.628235,  type: 2, fromlayer3  entity: 0
+EVENT time: 710.549011,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 711.506226,  type: 2, fromlayer3  entity: 0
+EVENT time: 716.225342,  type: 2, fromlayer3  entity: 1
+          TOLAYER3: packet being corrupted
+1
+EVENT time: 718.855103,  type: 2, fromlayer3  entity: 0
+EVENT time: 721.144043,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 727.003296,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 728.149109,  type: 2, fromlayer3  entity: 0
+EVENT time: 728.924744,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 730.547485,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 732.337891,  type: 2, fromlayer3  entity: 0
+EVENT time: 736.697205,  type: 2, fromlayer3  entity: 0
+EVENT time: 736.702576,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 741.516479,  type: 2, fromlayer3  entity: 0
+EVENT time: 746.042847,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 747.545044,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 749.401855,  type: 2, fromlayer3  entity: 0
+EVENT time: 753.718018,  type: 2, fromlayer3  entity: 0
+EVENT time: 755.466370,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 760.982422,  type: 2, fromlayer3  entity: 0
+EVENT time: 762.672913,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 766.724792,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 767.018372,  type: 2, fromlayer3  entity: 0
+EVENT time: 771.932251,  type: 2, fromlayer3  entity: 0
+EVENT time: 774.195007,  type: 2, fromlayer3  entity: 0
+EVENT time: 775.359314,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 775.751831,  type: 2, fromlayer3  entity: 0
+EVENT time: 781.787720,  type: 2, fromlayer3  entity: 0
+EVENT time: 782.095154,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 785.376526,  type: 2, fromlayer3  entity: 0
+EVENT time: 786.589661,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 792.082214,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 792.371826,  type: 2, fromlayer3  entity: 0
+EVENT time: 795.496094,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 800.302429,  type: 2, fromlayer3  entity: 0
+EVENT time: 802.715332,  type: 2, fromlayer3  entity: 0
+EVENT time: 805.116516,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 808.788818,  type: 2, fromlayer3  entity: 1
+          TOLAYER3: packet being corrupted
+1
+EVENT time: 810.765442,  type: 2, fromlayer3  entity: 0
+EVENT time: 811.095642,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 812.739319,  type: 2, fromlayer3  entity: 0
+EVENT time: 813.632812,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 815.493164,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 818.381226,  type: 2, fromlayer3  entity: 0
+EVENT time: 825.285889,  type: 2, fromlayer3  entity: 0
+EVENT time: 825.350891,  type: 2, fromlayer3  entity: 1
+          TOLAYER3: packet being lost
+1
+EVENT time: 832.747375,  type: 2, fromlayer3  entity: 0
+EVENT time: 833.441528,  type: 2, fromlayer3  entity: 1
+          TOLAYER3: packet being corrupted
+1
+EVENT time: 834.779175,  type: 2, fromlayer3  entity: 1
+          TOLAYER3: packet being corrupted
+1
+EVENT time: 835.864258,  type: 2, fromlayer3  entity: 1
+EVENT time: 837.473938,  type: 2, fromlayer3  entity: 0
+EVENT time: 838.760681,  type: 2, fromlayer3  entity: 0
+EVENT time: 839.119141,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 847.252197,  type: 2, fromlayer3  entity: 0
+EVENT time: 847.973206,  type: 2, fromlayer3  entity: 1
+          TOLAYER3: packet being corrupted
+1
+EVENT time: 857.156616,  type: 2, fromlayer3  entity: 0
+EVENT time: 857.789001,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 862.709961,  type: 2, fromlayer3  entity: 0
+EVENT time: 864.551819,  type: 2, fromlayer3  entity: 1
+          TOLAYER3: packet being lost
+1
+EVENT time: 865.334534,  type: 2, fromlayer3  entity: 0
+EVENT time: 870.580383,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 873.216003,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 877.805237,  type: 2, fromlayer3  entity: 0
+EVENT time: 881.372009,  type: 2, fromlayer3  entity: 1
+          TOLAYER3: packet being lost
+1
+EVENT time: 884.156189,  type: 2, fromlayer3  entity: 0
+EVENT time: 889.624695,  type: 2, fromlayer3  entity: 1
+          TOLAYER3: packet being lost
+1
+EVENT time: 891.132263,  type: 2, fromlayer3  entity: 1
+EVENT time: 895.262207,  type: 2, fromlayer3  entity: 0
+EVENT time: 895.391418,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 904.300049,  type: 2, fromlayer3  entity: 0
+EVENT time: 904.604614,  type: 2, fromlayer3  entity: 1
+1
+EVENT time: 905.942566,  type: 2, fromlayer3  entity: 1
+          TOLAYER3: packet being corrupted
+1
+EVENT time: 914.074158,  type: 2, fromlayer3  entity: 0
+EVENT time: 922.035156,  type: 2, fromlayer3  entity: 0
+ Simulator terminated at time 922.035156
+ after sending 20 msgs from layer5

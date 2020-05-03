@@ -1,0 +1,275 @@
+-----  Stop and Wait Network Simulator Version 1.1 -------- 
+
+the number of messages to simulate: 20
+packet loss probability: 0.100000
+packet corruption probability: 0.100000
+average time between messages from sender's layer5: 10.000000
+TRACE: 2
+EVENT time: 18.705740,  type: 1, fromlayer5  entity: 0
+  A_output: send packet0 in window:: aaaaaaaaaaaaaaaaaaa
+  start timer
+EVENT time: 24.170835,  type: 2, fromlayer3  entity: 1
+  B_input: got packet0: aaaaaaaaaaaaaaaaaaa
+  B_input: send ACK (ack=0)
+EVENT time: 29.402449,  type: 2, fromlayer3  entity: 0
+  A_input: got ACK (ack=0)
+EVENT time: 35.124840,  type: 1, fromlayer5  entity: 0
+  A_output: send packet1 in window:: bbbbbbbbbbbbbbbbbbb
+  start timer
+EVENT time: 37.145336,  type: 2, fromlayer3  entity: 1
+  B_input: got packet1: bbbbbbbbbbbbbbbbbbb
+  B_input: send ACK (ack=1)
+          TOLAYER3: packet being corrupted
+EVENT time: 41.612602,  type: 2, fromlayer3  entity: 0
+  A_input: packet corrupted!!
+EVENT time: 50.124840,  type: 0, timerinterrupt   entity: 0
+  A_timerinterrupt: start timer
+  A_timerinterrupt: resend packet(seq): 1 
+          TOLAYER3: packet being lost
+EVENT time: 52.094032,  type: 1, fromlayer5  entity: 0
+  A_output: send packet2 in window:: ccccccccccccccccccc
+EVENT time: 57.366261,  type: 2, fromlayer3  entity: 1
+  B_input: got packet2: ccccccccccccccccccc
+  B_input: send ACK (ack=2)
+EVENT time: 60.679379,  type: 1, fromlayer5  entity: 0
+  A_output: send packet3 in window:: ddddddddddddddddddd
+EVENT time: 61.568901,  type: 2, fromlayer3  entity: 0
+  A_input: got ACK (ack=2)
+  A_input: start timer
+EVENT time: 68.333923,  type: 2, fromlayer3  entity: 1
+  B_input: got packet3: ddddddddddddddddddd
+  B_input: send ACK (ack=3)
+EVENT time: 71.746826,  type: 2, fromlayer3  entity: 0
+  A_input: got ACK (ack=3)
+EVENT time: 78.498627,  type: 1, fromlayer5  entity: 0
+  A_output: send packet4 in window:: eeeeeeeeeeeeeeeeeee
+          TOLAYER3: packet being lost
+  start timer
+EVENT time: 80.240677,  type: 1, fromlayer5  entity: 0
+  A_output: send packet5 in window:: fffffffffffffffffff
+EVENT time: 84.399261,  type: 2, fromlayer3  entity: 1
+  B_input: not expected seq! send NAK (ack=3)
+          TOLAYER3: packet being lost
+EVENT time: 93.498627,  type: 0, timerinterrupt   entity: 0
+  A_timerinterrupt: start timer
+  A_timerinterrupt: resend packet(seq): 4 5 
+          TOLAYER3: packet being corrupted
+EVENT time: 99.336594,  type: 2, fromlayer3  entity: 1
+  B_input: got packet4: eeeeeeeeeeeeeeeeeee
+  B_input: send ACK (ack=4)
+          TOLAYER3: packet being lost
+EVENT time: 99.877747,  type: 1, fromlayer5  entity: 0
+  A_output: send packet6 in window:: ggggggggggggggggggg
+          TOLAYER3: packet being lost
+EVENT time: 108.498627,  type: 0, timerinterrupt   entity: 0
+  A_timerinterrupt: start timer
+  A_timerinterrupt: resend packet(seq): 4 5 6 
+          TOLAYER3: packet being lost
+EVENT time: 109.095840,  type: 2, fromlayer3  entity: 1
+  B_input: packet corrupted! send NAK (ack=4)
+          TOLAYER3: packet being lost
+EVENT time: 110.645912,  type: 1, fromlayer5  entity: 0
+  A_output: send packet7 in window:: hhhhhhhhhhhhhhhhhhh
+EVENT time: 111.782578,  type: 1, fromlayer5  entity: 0
+  A_output: send packet8 in window:: iiiiiiiiiiiiiiiiiii
+EVENT time: 114.369942,  type: 2, fromlayer3  entity: 1
+  B_input: not expected seq! send NAK (ack=4)
+          TOLAYER3: packet being corrupted
+EVENT time: 123.151199,  type: 2, fromlayer3  entity: 1
+  B_input: not expected seq! send NAK (ack=4)
+EVENT time: 123.280724,  type: 2, fromlayer3  entity: 0
+  A_input: packet corrupted!!
+EVENT time: 123.498627,  type: 0, timerinterrupt   entity: 0
+  A_timerinterrupt: start timer
+  A_timerinterrupt: resend packet(seq): 4 5 6 7 8 
+EVENT time: 123.598984,  type: 1, fromlayer5  entity: 0
+  A_output: send packet9 in window:: jjjjjjjjjjjjjjjjjjj
+EVENT time: 127.970482,  type: 2, fromlayer3  entity: 1
+  B_input: not expected seq! send NAK (ack=4)
+EVENT time: 128.898392,  type: 2, fromlayer3  entity: 0
+  A_input: got ACK (ack=4)
+  A_input: start timer
+EVENT time: 130.602631,  type: 2, fromlayer3  entity: 0
+  A_input: got NAK (ack=4).
+EVENT time: 131.632248,  type: 2, fromlayer3  entity: 1
+  B_input: not expected seq! send NAK (ack=4)
+          TOLAYER3: packet being lost
+EVENT time: 133.610626,  type: 2, fromlayer3  entity: 1
+  B_input: not expected seq! send NAK (ack=4)
+EVENT time: 133.620605,  type: 1, fromlayer5  entity: 0
+  A_output: send packet10 in window:: kkkkkkkkkkkkkkkkkkk
+EVENT time: 135.416962,  type: 2, fromlayer3  entity: 1
+  B_input: got packet5: fffffffffffffffffff
+  B_input: send ACK (ack=5)
+EVENT time: 137.529694,  type: 2, fromlayer3  entity: 1
+  B_input: got packet6: ggggggggggggggggggg
+  B_input: send ACK (ack=6)
+EVENT time: 141.568481,  type: 2, fromlayer3  entity: 0
+  A_input: got NAK (ack=4).
+EVENT time: 143.898392,  type: 0, timerinterrupt   entity: 0
+  A_timerinterrupt: start timer
+  A_timerinterrupt: resend packet(seq): 5 6 7 8 9 10 
+          TOLAYER3: packet being lost
+          TOLAYER3: packet being lost
+          TOLAYER3: packet being corrupted
+EVENT time: 144.221039,  type: 2, fromlayer3  entity: 1
+  B_input: got packet7: hhhhhhhhhhhhhhhhhhh
+  B_input: send ACK (ack=7)
+EVENT time: 149.399658,  type: 1, fromlayer5  entity: 0
+  A_output: send packet11 in window:: lllllllllllllllllll
+EVENT time: 149.693649,  type: 2, fromlayer3  entity: 1
+  B_input: got packet8: iiiiiiiiiiiiiiiiiii
+  B_input: send ACK (ack=8)
+          TOLAYER3: packet being lost
+EVENT time: 151.416458,  type: 2, fromlayer3  entity: 0
+  A_input: got ACK (ack=5)
+  A_input: start timer
+EVENT time: 154.161697,  type: 2, fromlayer3  entity: 0
+  A_input: got ACK (ack=6)
+  A_input: start timer
+EVENT time: 155.080505,  type: 2, fromlayer3  entity: 1
+  B_input: got packet9: jjjjjjjjjjjjjjjjjjj
+  B_input: send ACK (ack=9)
+EVENT time: 157.018112,  type: 1, fromlayer5  entity: 0
+  A_output: send packet12 in window:: mmmmmmmmmmmmmmmmmmm
+EVENT time: 162.984818,  type: 2, fromlayer3  entity: 0
+  A_input: got ACK (ack=7)
+  A_input: start timer
+EVENT time: 163.906403,  type: 2, fromlayer3  entity: 1
+  B_input: got packet10: kkkkkkkkkkkkkkkkkkk
+  B_input: send ACK (ack=10)
+          TOLAYER3: packet being corrupted
+EVENT time: 168.231949,  type: 2, fromlayer3  entity: 0
+  A_input: got ACK (ack=9)
+  A_input: start timer
+EVENT time: 173.394577,  type: 2, fromlayer3  entity: 1
+  B_input: not expected seq! send NAK (ack=10)
+EVENT time: 175.368652,  type: 1, fromlayer5  entity: 0
+  A_output: send packet13 in window:: nnnnnnnnnnnnnnnnnnn
+EVENT time: 175.899796,  type: 2, fromlayer3  entity: 1
+  B_input: not expected seq! send NAK (ack=10)
+EVENT time: 177.554398,  type: 2, fromlayer3  entity: 0
+  A_input: packet corrupted!!
+EVENT time: 177.931900,  type: 1, fromlayer5  entity: 0
+  A_output: send packet14 in window:: ooooooooooooooooooo
+EVENT time: 180.550781,  type: 2, fromlayer3  entity: 0
+  A_input: got ACK (ack=10)
+  A_input: start timer
+EVENT time: 182.159073,  type: 2, fromlayer3  entity: 1
+  B_input: not expected seq! send NAK (ack=10)
+EVENT time: 184.463547,  type: 2, fromlayer3  entity: 0
+  A_input: got NAK (ack=10).
+EVENT time: 188.060028,  type: 2, fromlayer3  entity: 1
+  B_input: packet corrupted! send NAK (ack=10)
+EVENT time: 189.643890,  type: 2, fromlayer3  entity: 1
+  B_input: got packet11: lllllllllllllllllll
+  B_input: send ACK (ack=11)
+EVENT time: 192.065552,  type: 2, fromlayer3  entity: 0
+  A_input: got NAK (ack=10).
+EVENT time: 192.179214,  type: 2, fromlayer3  entity: 1
+  B_input: got packet12: mmmmmmmmmmmmmmmmmmm
+  B_input: send ACK (ack=12)
+EVENT time: 193.328247,  type: 2, fromlayer3  entity: 1
+  B_input: got packet13: nnnnnnnnnnnnnnnnnnn
+  B_input: send ACK (ack=13)
+          TOLAYER3: packet being corrupted
+EVENT time: 195.550781,  type: 0, timerinterrupt   entity: 0
+  A_timerinterrupt: start timer
+  A_timerinterrupt: resend packet(seq): 11 12 13 14 
+EVENT time: 195.982330,  type: 1, fromlayer5  entity: 0
+  A_output: send packet15 in window:: ppppppppppppppppppp
+EVENT time: 197.501953,  type: 2, fromlayer3  entity: 1
+  B_input: got packet14: ooooooooooooooooooo
+  B_input: send ACK (ack=14)
+EVENT time: 201.196442,  type: 2, fromlayer3  entity: 0
+  A_input: got NAK (ack=10).
+EVENT time: 201.220169,  type: 2, fromlayer3  entity: 1
+  B_input: not expected seq! send NAK (ack=14)
+EVENT time: 205.574463,  type: 2, fromlayer3  entity: 0
+  A_input: got ACK (ack=11)
+  A_input: start timer
+EVENT time: 206.091843,  type: 2, fromlayer3  entity: 1
+  B_input: not expected seq! send NAK (ack=14)
+EVENT time: 208.872269,  type: 1, fromlayer5  entity: 0
+  A_output: send packet16 in window:: qqqqqqqqqqqqqqqqqqq
+EVENT time: 208.896225,  type: 2, fromlayer3  entity: 0
+  A_input: got ACK (ack=12)
+  A_input: start timer
+EVENT time: 212.631073,  type: 2, fromlayer3  entity: 1
+  B_input: not expected seq! send NAK (ack=14)
+EVENT time: 215.664673,  type: 2, fromlayer3  entity: 0
+  A_input: packet corrupted!!
+EVENT time: 216.738815,  type: 2, fromlayer3  entity: 1
+  B_input: not expected seq! send NAK (ack=14)
+EVENT time: 219.517395,  type: 2, fromlayer3  entity: 1
+  B_input: got packet15: ppppppppppppppppppp
+  B_input: send ACK (ack=15)
+          TOLAYER3: packet being corrupted
+EVENT time: 222.170059,  type: 2, fromlayer3  entity: 0
+  A_input: got ACK (ack=14)
+  A_input: start timer
+EVENT time: 222.840225,  type: 2, fromlayer3  entity: 1
+  B_input: got packet16: qqqqqqqqqqqqqqqqqqq
+  B_input: send ACK (ack=16)
+EVENT time: 223.575684,  type: 2, fromlayer3  entity: 0
+  A_input: got NAK (ack=14).
+EVENT time: 224.720016,  type: 2, fromlayer3  entity: 0
+  A_input: got NAK (ack=14).
+EVENT time: 228.237030,  type: 1, fromlayer5  entity: 0
+  A_output: send packet17 in window:: rrrrrrrrrrrrrrrrrrr
+EVENT time: 233.476212,  type: 2, fromlayer3  entity: 0
+  A_input: got NAK (ack=14).
+EVENT time: 233.601898,  type: 1, fromlayer5  entity: 0
+  A_output: send packet18 in window:: sssssssssssssssssss
+          TOLAYER3: packet being lost
+EVENT time: 234.770187,  type: 2, fromlayer3  entity: 1
+  B_input: got packet17: rrrrrrrrrrrrrrrrrrr
+  B_input: send ACK (ack=17)
+          TOLAYER3: packet being lost
+EVENT time: 236.743500,  type: 1, fromlayer5  entity: 0
+  A_output: send packet19 in window:: ttttttttttttttttttt
+EVENT time: 237.170059,  type: 0, timerinterrupt   entity: 0
+  A_timerinterrupt: start timer
+  A_timerinterrupt: resend packet(seq): 15 16 17 18 19 
+          TOLAYER3: packet being lost
+EVENT time: 240.662155,  type: 2, fromlayer3  entity: 0
+  A_input: got NAK (ack=14).
+EVENT time: 241.174484,  type: 2, fromlayer3  entity: 1
+  B_input: not expected seq! send NAK (ack=17)
+          TOLAYER3: packet being lost
+EVENT time: 242.997849,  type: 2, fromlayer3  entity: 1
+  B_input: not expected seq! send NAK (ack=17)
+          TOLAYER3: packet being lost
+EVENT time: 244.533493,  type: 2, fromlayer3  entity: 0
+  A_input: packet corrupted!!
+EVENT time: 244.535355,  type: 2, fromlayer3  entity: 1
+  B_input: not expected seq! send NAK (ack=17)
+          TOLAYER3: packet being lost
+EVENT time: 248.658463,  type: 2, fromlayer3  entity: 0
+  A_input: got ACK (ack=16)
+  A_input: start timer
+EVENT time: 251.555450,  type: 2, fromlayer3  entity: 1
+  B_input: not expected seq! send NAK (ack=17)
+EVENT time: 252.969818,  type: 2, fromlayer3  entity: 1
+  B_input: not expected seq! send NAK (ack=17)
+EVENT time: 257.718506,  type: 2, fromlayer3  entity: 0
+  A_input: got ACK (ack=17)
+  A_input: start timer
+EVENT time: 263.133240,  type: 2, fromlayer3  entity: 0
+  A_input: got NAK (ack=17).
+EVENT time: 272.718506,  type: 0, timerinterrupt   entity: 0
+  A_timerinterrupt: start timer
+  A_timerinterrupt: resend packet(seq): 18 19 
+EVENT time: 274.666412,  type: 2, fromlayer3  entity: 1
+  B_input: got packet18: sssssssssssssssssss
+  B_input: send ACK (ack=18)
+EVENT time: 277.030945,  type: 2, fromlayer3  entity: 1
+  B_input: got packet19: ttttttttttttttttttt
+  B_input: send ACK (ack=19)
+EVENT time: 280.461945,  type: 2, fromlayer3  entity: 0
+  A_input: got ACK (ack=18)
+  A_input: start timer
+EVENT time: 287.080841,  type: 2, fromlayer3  entity: 0
+  A_input: got ACK (ack=19)
+ Simulator terminated at time 287.080841
+ after sending 20 msgs from layer5
