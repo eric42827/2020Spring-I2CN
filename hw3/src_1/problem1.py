@@ -34,7 +34,7 @@ class dijkstra():
             self.distance[v] = self.distance[u] + self.topo_matrix[u][v]
             self.predecessor[v] = u
     def output_file(self):
-        with open(path_prefix+command[1], 'a') as f:
+        with open(path_prefix+path_name+'_out1.txt', 'a') as f:
             f.write('Routing table of router {}:\n'.format(self.source+1))
             for i in  range(vertex_num):
                 if self.distance[i] == 65535 :
@@ -57,6 +57,7 @@ try:
         command = command.split(' ')
         path_prefix = './'
         if command[0]=='lf':
+            path_name = command[1].split('.')[0]
             with open(path_prefix+command[1],'r') as f:
                 vertex_num = int(f.readline())
                 topo_matrix = np.array([line.strip('\n').split(' ') for line in f], dtype = int)
@@ -67,6 +68,9 @@ try:
                 D.routing(i)
                 D.output_file()
             print('finish process')
+            break
+        else:
+            print("Invalid command!Please enter again!")
 except KeyboardInterrupt:
     pass
 

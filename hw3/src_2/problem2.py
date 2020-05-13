@@ -33,22 +33,11 @@ class dijkstra():
         if(self.distance[v] > self.distance[u] + self.topo_matrix[u][v]):
             self.distance[v] = self.distance[u] + self.topo_matrix[u][v]
             self.predecessor[v] = u
-    def output_file(self):
-        with open(path_prefix+command[1], 'a') as f:
+    def output_filer(self):
+        with open(path_prefix+path_name+'_out2.txt', 'a') as f:
             f.write('Routing table of router {}:\n'.format(self.source+1))
             for i in  range(vertex_num):
-                if self.distance[i] == 65535 :
-                    f.write('-1 -1\n')
-                elif self.distance[i] == 0:
-                    f.write('0 {}\n'.format(self.source+1))
-                else:
-                    f.write('{} {}\n'.format(self.distance[i],self.next_router(i)+1))
-            f.close()
-    def output_filer(self,router_rm):
-        with open(path_prefix+command[1], 'a') as f:
-            f.write('Routing table of router {}:\n'.format(self.source+1))
-            for i in  range(vertex_num):
-                if i == router_rm - 1:
+                if (i+1 in rm_set):
                     continue
                 if self.distance[i] == 65535 :
                     f.write('-1 -1\n')
@@ -70,23 +59,29 @@ try:
         command = command.split(' ')
         path_prefix = './'
         if command[0]=='lf':
+            path_name = command[1].split('.')[0]
             with open(path_prefix+command[1],'r') as f:
                 vertex_num = int(f.readline())
                 topo_matrix = np.array([line.strip('\n').split(' ') for line in f], dtype = int)
-            print('load file complete\n')
+            adj_mat = topo_matrix.copy()
+            rm_set = []
+            print('load file complete')
         elif command[0]=='of':
             D = dijkstra(adj_mat)
             for i in range(vertex_num):
-                if i != router_rm-1:
+                if not(i+1 in rm_set):
                     D.routing(i)
-                    D.output_filer(router_rm)
-            print('finish process\n')
+                    D.output_filer()
+            print('finish process')
+            break
         elif command[0]=='rm':
             router_rm = int(command[1].strip('r'))
-            adj_mat = topo_matrix.copy()
+            rm_set.append(router_rm)
             adj_mat[router_rm-1].fill(-1)
             adj_mat[:][router_rm-1].fill(-1)
-            print('remove router{}\n'.format(router_rm))
+            print('remove router{}'.format(router_rm))
+        else:
+            print("Invalid command!Please enter again!")
 except KeyboardInterrupt:
     pass
 
